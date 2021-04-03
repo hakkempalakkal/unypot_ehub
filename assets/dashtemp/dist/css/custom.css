@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Shrikhand);
+
+.logo-title {
+  font-family: 'Shrikhand';
+}
+
+.form-button {
+	float: right; 
+	position: absolute; 
+	right: 15px; 
+	top: 10px
+}
+
+table th {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+
+table thead tr {
+	border-bottom: none;	
+}
+
+.button-in-footer{
+	position: fixed;
+	padding: 10px;
+	width: 100%;
+	background: #fff;
+	border-top: 1px solid #ccc;
+	bottom: 0;
+	z-index: 999;
+}
+
+.button-in-footer button {
+	float: right;
+}
+
+.title-page {
+	text-tranform:uppercase; 
+	letter-spacing:-1px
+}
+
+.link-bc {
+	text-decoration: underline;
+	color: #000; 
+}
+
+.box {
+	background: none;
+	box-shadow: none;	
+	border-radius: 0px;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  border-top: 1px solid #ddd;
+}
+.table > thead > tr > th {
+  border-bottom: 2px solid #ddd;
+  background: #eee;
+}
+.table tr td .progress {
+  margin-top: 5px;
+}
+.table-bordered {
+  border: 1px solid #ddd;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #ddd;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+  border-bottom-width: 1px;
+}
+.table.no-border,
+.table.no-border td,
+.table.no-border th {
+  border: 0;
+}
+
+.box-body {
+	padding:15px 0px;
+}
+
+.btntable {
+	font-size:14px;
+	font-weight:bold;
+	color:#000;
+}
+
+.content-header > .breadcrumb {
+  font-size: 14px;
+}
+
+.main-footer {
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.view-title {
+	font-weight:bold; 
+	text-align:left;
+}
+
+.view-txt {
+	text-align:left;
+}
+
+.alert-txt {
+	font-size: 17px;
+}

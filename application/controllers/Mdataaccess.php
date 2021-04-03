@@ -1,0 +1,50 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Mdataaccess extends CI_Controller 
+{
+    function __construct() {
+        parent::__construct();
+    }
+
+    public function getFields($id=0) {
+        $field_list = $this->dataaccess->select('dynamicfield', '1=1', array('field_seq' => 'asc'));
+
+        if(!empty($field_list)) {
+            $response = array(
+                'field_list' => $field_list,
+            );
+        } else {
+            $response = array(          
+                'field_list' => array(),
+            );
+        }
+
+        $ret = array(
+            'Status' => 200,
+            'Data' => $response
+        );
+        exitJsonFormat($ret);     
+    }
+
+    public function doSubmit() {
+        $field_list = $this->input->post('field_list'); 
+        $form_id = date("YmdHis");
+        $dataList = json_decode($field_list);
+        foreach($dataList->data as $row) {
+            $insertLine = array(
+                'form_id' => $form_id, 
+                'field_id' => $row->row_id, 
+                'field_name' => $row->field_name, 
+                'field_data' => $row->field_data,          
+            );
+            $this->dataaccess->insert("dataform", $insertLine); 
+        }
+
+        $response['msg'] = "";
+        $ret = array(
+            'Status' => 200,
+            'Data' => $response
+        );
+        exitJsonFormat($ret);     
+    }
+}	

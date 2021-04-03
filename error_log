@@ -1,0 +1,9 @@
+[31-May-2019 11:28:17 Asia/Jakarta] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/cipx3521/public_html/demo/107/application/models/Dataaccess_mdl.php on line 15
+[31-May-2019 11:28:33 Asia/Jakarta] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/cipx3521/public_html/demo/107/application/models/Dataaccess_mdl.php on line 15
+[21-Jun-2019 13:49:57 Asia/Jakarta] PHP Fatal error:  Call to a member function initialize() on a non-object in /home/cipx3521/public_html/demo/101/application/controllers/Datatable.php on line 89
+[26-Jun-2019 21:46:21 Asia/Jakarta] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/cipx3521/public_html/demo/101/application/models/Dataaccess_mdl.php on line 15
+[26-Jun-2019 21:48:07 Asia/Jakarta] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/cipx3521/public_html/demo/101/application/models/Dataaccess_mdl.php on line 15
+[26-Jun-2019 21:48:15 Asia/Jakarta] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/cipx3521/public_html/demo/101/application/models/Dataaccess_mdl.php on line 15
+[27-Jun-2019 03:22:48 Asia/Jakarta] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/cipx3521/public_html/demo/101/application/models/Dataaccess_mdl.php on line 15
+[27-Jun-2019 03:22:57 Asia/Jakarta] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/cipx3521/public_html/demo/101/application/models/Dataaccess_mdl.php on line 15
+[25-Aug-2019 08:25:08 Asia/Jakarta] PHP Fatal error:  Call to a member function initialize() on a non-object in /home/cipx3521/public_html/demo/dynamicform/application/controllers/Definefield.php on line 91
