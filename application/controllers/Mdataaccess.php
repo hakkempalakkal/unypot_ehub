@@ -45,6 +45,26 @@ class Mdataaccess extends CI_Controller
         exitJsonFormat($ret);     
     }
 
+    public function getFieldsuploaderbyid($id=0) {
+        $field_list = $this->dataaccess->select('dynamicfield', "field_type='filechooser' and service_id=".$id, array('field_seq' => 'asc'));
+
+        if(!empty($field_list)) {
+            $response = array(
+                'field_list' => $field_list,
+            );
+        } else {
+            $response = array(          
+                'field_list' => array(),
+            );
+        }
+
+        $ret = array(
+            'Status' => 200,
+            'Data' => $response
+        );
+        exitJsonFormat($ret);     
+    }
+
     public function getservice() {
         $field_list = $this->dataaccess->select('services', '1=1', array());
 
@@ -100,7 +120,7 @@ class Mdataaccess extends CI_Controller
        $requestid= $this->dataaccess->insert("userrequests", $insertrequest); 
        
         
-        $form_id= $id;
+        $form_id=  $requestid;
        
         foreach($dataList->data as $row) {
             $insertLine = array(
