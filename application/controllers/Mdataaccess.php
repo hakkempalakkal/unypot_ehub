@@ -143,21 +143,21 @@ class Mdataaccess extends CI_Controller
         exitJsonFormat($ret);     
     }
     public function doSubmitimg() {
-        $Reqid = $this->input->post('Reqid'); 
+        // $Reqid = $this->input->post('Reqid'); 
        
       
       
         
-        // $form_id=  $requestid;
-            $insertLine = array(
-                'form_id' => $Reqid
+        // // $form_id=  $requestid;
+        //     $insertLine = array(
+        //         'form_id' => $Reqid
                       
-            );
-            $this->dataaccess->insert("dataform", $insertLine); 
+        //     );
+        //     $this->dataaccess->insert("dataform", $insertLine); 
        
 
         $response['msg'] = "";
-        $response['formid'] =  $Reqid;
+        // $response['formid'] =  $Reqid;
         $ret = array(
             'Status' => 200,
             'Data' => $response
