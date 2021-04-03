@@ -46,6 +46,26 @@ class Mdataaccess extends CI_Controller
         exitJsonFormat($ret);     
     }
 
+    public function getservicebyid($id=0) {
+        $field_list = $this->dataaccess->select('services', 'service_id='.$id, array());
+
+        if(!empty($field_list)) {
+            $response = array(
+                'service_list' => $field_list,
+            );
+        } else {
+            $response = array(          
+                'service_list' => array(),
+            );
+        }
+
+        $ret = array(
+            'Status' => 200,
+            'Data' => $response
+        );
+        exitJsonFormat($ret);     
+    }
+
     public function doSubmit() {
         $field_list = $this->input->post('field_list'); 
         $form_id = date("YmdHis");
