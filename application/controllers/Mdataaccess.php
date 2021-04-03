@@ -45,6 +45,8 @@ class Mdataaccess extends CI_Controller
         exitJsonFormat($ret);     
     }
 
+    
+
     public function getFieldsuploaderbyid($id=0) {
         $field_list = $this->dataaccess->select('dynamicfield', "field_type='filechooser' and service_id=".$id, array('field_seq' => 'asc'));
 
@@ -140,4 +142,27 @@ class Mdataaccess extends CI_Controller
         );
         exitJsonFormat($ret);     
     }
+    public function doSubmitimg() {
+        $Reqid = $this->input->post('Reqid'); 
+       
+      
+      
+        
+        // $form_id=  $requestid;
+            $insertLine = array(
+                'form_id' => $Reqid
+                      
+            );
+            $this->dataaccess->insert("dataform", $insertLine); 
+       
+
+        $response['msg'] = "";
+        $response['formid'] =  $Reqid;
+        $ret = array(
+            'Status' => 200,
+            'Data' => $response
+        );
+        exitJsonFormat($ret);     
+    }
+    
 }	
