@@ -168,4 +168,30 @@ class Mdataaccess extends CI_Controller
         exitJsonFormat($ret);     
     }
     
+    public function registeruser() {
+        $fullnale = $this->input->post('fullname'); 
+        $adhaar = $this->input->post('adhaar'); 
+        $mobile = $this->input->post('mobile'); 
+        $email= $this->input->post('email');
+        $password= $this->input->post('password');
+        // $form_id=  $requestid;
+
+        $insertLine = array(
+            'Fullname' => $Reqid, 
+            'adhaarno' => $field_id, 
+            'Phonenumber' => $Name, 
+            'EmailID' => $Image,     
+            'Password' => $Image,      
+        );
+        $this->dataaccess->insert("app_users", $insertLine); 
+       
+
+        $response['msg'] = "";
+        $ret = array(
+            'Status' => 200,
+            'Data' => $response
+        );
+        exitJsonFormat($ret);     
+    }
+    
 }	
