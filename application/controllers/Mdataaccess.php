@@ -26,16 +26,16 @@ class Mdataaccess extends CI_Controller
         exitJsonFormat($ret);     
     }
 
-    public function getFields1($id=0) {
-        $field_list = $this->dataaccess->select('dynamicfield', '1=1', array('field_seq' => 'asc'));
+    public function getservice() {
+        $field_list = $this->dataaccess->select('services', '1=1', array());
 
         if(!empty($field_list)) {
             $response = array(
-                'field_list' => $field_list,
+                'service_list' => $field_list,
             );
         } else {
             $response = array(          
-                'field_list' => array(),
+                'service_list' => array(),
             );
         }
 
