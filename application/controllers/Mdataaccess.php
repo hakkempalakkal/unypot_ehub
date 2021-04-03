@@ -25,6 +25,25 @@ class Mdataaccess extends CI_Controller
         );
         exitJsonFormat($ret);     
     }
+    public function getFieldsbyid($id=0) {
+        $field_list = $this->dataaccess->select('dynamicfield', 'service_id='.$id, array('field_seq' => 'asc'));
+
+        if(!empty($field_list)) {
+            $response = array(
+                'field_list' => $field_list,
+            );
+        } else {
+            $response = array(          
+                'field_list' => array(),
+            );
+        }
+
+        $ret = array(
+            'Status' => 200,
+            'Data' => $response
+        );
+        exitJsonFormat($ret);     
+    }
 
     public function getservice() {
         $field_list = $this->dataaccess->select('services', '1=1', array());
