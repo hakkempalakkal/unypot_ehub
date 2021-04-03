@@ -88,12 +88,12 @@ class Mdataaccess extends CI_Controller
     public function doSubmit($userid=0) {
         $field_list = $this->input->post('field_list'); 
         $dataList = json_decode($field_list);
-    //     $ServiceID=0;
-    //     foreach($dataList->data as $rows) {
+        $ServiceID=0;
+        foreach($dataList->data as $rows) {
            
-    //         $ServiceID= $rows->service_id;
-    //         break;
-    //     }
+            $ServiceID= $rows->service_id;
+            break;
+        }
     //     // $form_id = date("YmdHis");
     //     $reqdate = date("Y-m-d H:i:s");
     //     $insertrequest = array(
@@ -105,7 +105,7 @@ class Mdataaccess extends CI_Controller
     //    $requestid= $this->dataaccess->insert("userrequests", $insertrequest); 
        
         
-        $form_id= $userid;
+        $form_id= $ServiceID;
        
         foreach($dataList->data as $row) {
             $insertLine = array(
