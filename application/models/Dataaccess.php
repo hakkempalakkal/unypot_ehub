@@ -80,7 +80,8 @@ class Dataaccess extends CI_Model {
 	}
 
 	public function insert($table, $data) {	    
-		return $this->db->insert($table, $data);
+	 $this->db->insert($table, $data);
+	 return $this->db->insert_id();
 	}
 
 	public function update($table, $data, $condition) {
