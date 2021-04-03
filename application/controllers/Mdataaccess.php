@@ -136,6 +136,8 @@ class Mdataaccess extends CI_Controller
 
         $response['msg'] ="";
         $response['id'] =(string)$requestid;
+        $response['sid'] =(string) $id;
+       
         $ret = array(
             'Status' => 200,
             'Data' => $response,
@@ -155,11 +157,10 @@ class Mdataaccess extends CI_Controller
             'field_name' => $Name, 
             'field_data' => $Image,          
         );
-            $this->dataaccess->insert("dataform", $insertLine); 
+        $this->dataaccess->insert("dataform", $insertLine); 
        
 
-        $response['msg'] = $Reqid;
-        $response['formid'] =  $Reqid;
+        $response['msg'] = "";
         $ret = array(
             'Status' => 200,
             'Data' => $response
