@@ -41,6 +41,18 @@ class Dataaccess extends CI_Model {
 		return $query->result();
 	}
 
+	public function selectsinglerow($table, $condition=null) {
+		$this->db->select('*');
+		$this->db->from($table);
+		if(!empty($condition)) {			
+			$this->db->where($condition);
+		}
+	
+		$query = $this->db->get();
+		return $query->row();
+	}
+
+
 	public function get($table, $condition) {
 		$this->db->select('*');
 		$this->db->from($table);

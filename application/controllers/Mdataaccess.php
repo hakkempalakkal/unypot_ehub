@@ -47,7 +47,7 @@ class Mdataaccess extends CI_Controller
     }
 
     public function getservicebyid($id=0) {
-        $field_list = $this->dataaccess->select('services', 'service_id='.$id, array());
+        $field_list = $this->dataaccess->selectsinglerow('services', 'service_id='.$id, array());
 
         if(!empty($field_list)) {
             $response = array(
