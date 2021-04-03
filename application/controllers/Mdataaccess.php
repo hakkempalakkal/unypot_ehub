@@ -134,7 +134,7 @@ class Mdataaccess extends CI_Controller
             $this->dataaccess->insert("dataform", $insertLine); 
         }
 
-        $response['msg'] = ""+$requestid;
+        $response['msg'] = $requestid;
         $response['formid'] =  $requestid;
         $ret = array(
             'Status' => 200,
