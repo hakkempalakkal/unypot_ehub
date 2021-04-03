@@ -105,7 +105,7 @@ class Mdataaccess extends CI_Controller
     //    $requestid= $this->dataaccess->insert("userrequests", $insertrequest); 
        
         
-        $form_id= $ServiceID;
+        $form_id= $field_list;
        
         foreach($dataList->data as $row) {
             $insertLine = array(
