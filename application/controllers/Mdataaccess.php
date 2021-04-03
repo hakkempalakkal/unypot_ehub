@@ -134,8 +134,8 @@ class Mdataaccess extends CI_Controller
             $this->dataaccess->insert("dataform", $insertLine); 
         }
 
-        $response['msg'] = "";
-        $response['formid'] =  $form_id;
+        $response['msg'] = ""+$requestid;
+        $response['formid'] =  $requestid;
         $ret = array(
             'Status' => 200,
             'Data' => $response
@@ -144,19 +144,20 @@ class Mdataaccess extends CI_Controller
     }
     public function doSubmitimg() {
         $Reqid = $this->input->post('Reqid'); 
-       
-      
-      
-        
+        $Name = $this->input->post('Name'); 
+        $Image = $this->input->post('Image'); 
+        $field_id= $this->input->post('field_id');
         // $form_id=  $requestid;
-            $insertLine = array(
-                'form_id' => $Reqid
-                      
-            );
+        $insertLine = array(
+            'form_id' => $Reqid, 
+            'field_id' => $field_id, 
+            'field_name' => $Name, 
+            'field_data' => $Image,          
+        );
             $this->dataaccess->insert("dataform", $insertLine); 
        
 
-        $response['msg'] = "";
+        $response['msg'] = $Reqid;
         $response['formid'] =  $Reqid;
         $ret = array(
             'Status' => 200,
