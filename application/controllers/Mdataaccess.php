@@ -138,7 +138,7 @@ class Mdataaccess extends CI_Controller
         $ret = array(
             'Status' => 200,
             'Data' => $response,
-            'Id'=>$requestid;
+            'Id'=> $requestid
         );
         exitJsonFormat($ret);     
     }
