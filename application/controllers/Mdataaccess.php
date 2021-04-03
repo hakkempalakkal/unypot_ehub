@@ -26,7 +26,7 @@ class Mdataaccess extends CI_Controller
         exitJsonFormat($ret);     
     }
     public function getFieldsbyid($id=0) {
-        $field_list = $this->dataaccess->select('dynamicfield', 'service_id='.$id, array('field_seq' => 'asc'));
+        $field_list = $this->dataaccess->select('dynamicfield', "field_type!='filechooser' and service_id=".$id, array('field_seq' => 'asc'));
 
         if(!empty($field_list)) {
             $response = array(

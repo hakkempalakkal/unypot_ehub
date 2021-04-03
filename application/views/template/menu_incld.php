@@ -26,6 +26,19 @@
             <li ><a href="index2.html"><i class="fa fa-circle-o"></i> Rejected</a></li>
           </ul>
         </li>
+
+        <li class="active treeview menu-open">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Service Management</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?= site_url("ServiceList") ?>"><i class="fa fa-circle-o"></i> Service List</a></li>
+            <li><a href="ServiceList"><i class="fa fa-circle-o"></i> Create Service</a></li>
+          </ul>
+        </li>
       <li><a href="<?= site_url("definefield") ?>"><i class="fa fa-file"></i> Setup Android Form</a></li>
       <li><a href="<?= site_url("dataform") ?>"><i class="fa fa-table"></i> Data inputted</a></li>
       <li><a href="<?= site_url("user") ?>"><i class="fa fa-user"></i> User Backend</a></li>
