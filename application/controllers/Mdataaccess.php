@@ -85,9 +85,11 @@ class Mdataaccess extends CI_Controller
         exitJsonFormat($ret);     
     }
 
-    public function doSubmit() {
+    public function doSubmit($idval=0) {
         $field_list = $this->input->post('field_list'); 
-        $form_id = date("YmdHis");
+        // $form_id = date("YmdHis");
+
+        $form_id= $idval;
         $dataList = json_decode($field_list);
         foreach($dataList->data as $row) {
             $insertLine = array(
@@ -100,6 +102,7 @@ class Mdataaccess extends CI_Controller
         }
 
         $response['msg'] = "";
+        $response['formid'] =  $form_id;
         $ret = array(
             'Status' => 200,
             'Data' => $response
