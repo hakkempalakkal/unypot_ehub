@@ -12,6 +12,20 @@
 
     <ul class="sidebar-menu">
       <li class="header">MENU</li>
+      <li class="active treeview menu-open">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Requestes</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="index.html"><i class="fa fa-circle-o"></i> New Request</a></li>
+            <li ><a href="index2.html"><i class="fa fa-circle-o"></i> Pending</a></li>
+            <li ><a href="index2.html"><i class="fa fa-circle-o"></i> Completed</a></li>
+            <li ><a href="index2.html"><i class="fa fa-circle-o"></i> Rejected</a></li>
+          </ul>
+        </li>
       <li><a href="<?= site_url("definefield") ?>"><i class="fa fa-file"></i> Setup Android Form</a></li>
       <li><a href="<?= site_url("dataform") ?>"><i class="fa fa-table"></i> Data inputted</a></li>
       <li><a href="<?= site_url("user") ?>"><i class="fa fa-user"></i> User Backend</a></li>

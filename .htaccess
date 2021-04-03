@@ -1,4 +1,10 @@
 
+RewriteEngine on
+RewriteCond $1 !^(index\.php|resources|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L,QSA] 
+
 # php -- BEGIN cPanel-generated handler, do not edit
 # Set the “ea-php55” package as the default “PHP” programming language.
 <IfModule mime_module>
