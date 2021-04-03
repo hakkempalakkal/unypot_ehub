@@ -6,7 +6,27 @@ class Mdataaccess extends CI_Controller
         parent::__construct();
     }
 
-    public function getFields($id=0) {
+    public function getFields() {
+        $field_list = $this->dataaccess->select('dynamicfield', '1=1', array('field_seq' => 'asc'));
+
+        if(!empty($field_list)) {
+            $response = array(
+                'field_list' => $field_list,
+            );
+        } else {
+            $response = array(          
+                'field_list' => array(),
+            );
+        }
+
+        $ret = array(
+            'Status' => 200,
+            'Data' => $response
+        );
+        exitJsonFormat($ret);     
+    }
+
+    public function getFields1($id=0) {
         $field_list = $this->dataaccess->select('dynamicfield', '1=1', array('field_seq' => 'asc'));
 
         if(!empty($field_list)) {
