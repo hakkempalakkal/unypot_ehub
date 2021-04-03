@@ -85,7 +85,7 @@ class Mdataaccess extends CI_Controller
         exitJsonFormat($ret);     
     }
 
-    public function doSubmit($userid=0) {
+    public function doSubmit($userid=0,$id=0) {
         $field_list = $this->input->post('field_list'); 
         $dataList = json_decode($field_list);
         $ServiceID=0;
@@ -105,7 +105,7 @@ class Mdataaccess extends CI_Controller
     //    $requestid= $this->dataaccess->insert("userrequests", $insertrequest); 
        
         
-        $form_id= $field_list;
+        $form_id= $id;
        
         foreach($dataList->data as $row) {
             $insertLine = array(
