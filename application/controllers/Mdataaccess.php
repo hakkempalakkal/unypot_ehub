@@ -146,8 +146,7 @@ class Mdataaccess extends CI_Controller
 
     public function doSubmit($userid=0,$id=0) {
         $field_list = $this->input->post('field_list'); 
-        var_dump($field_list);
-        die();
+        
        
         $dataList = json_decode($field_list);
       
