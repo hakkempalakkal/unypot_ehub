@@ -163,9 +163,14 @@ class Mdataaccess extends CI_Controller
         
         $form_id=  $requestid;
        
-        var_dump($dataList);
-        die();
+        $field_data="";
         foreach($dataList->data as $row) {
+            if (isset( $row->field_data)) {
+                $field_data=$row->field_data;
+            }
+            else{
+                $field_data="";
+            }
             $insertLine = array(
                 'form_id' => $form_id, 
                 'field_id' => $row->row_id, 
