@@ -62,12 +62,13 @@ class Dataaccess extends CI_Model {
 	
 	}
 
-	public function getallnewrequests() {
+	public function getallnewrequests($status="") {
 		$sql="SELECT userrequests.UserRequestID,`RequetedDate`,`Request_status`,services.servicename,services.Short_description 
 		,app_users.Fullname,app_users.adhaarno,app_users.Phonenumber,app_users.EmailID
 		FROM `userrequests`
 		inner join services on services.service_id=userrequests.ServiceID
-		inner join app_users on app_users.App_UserID=userrequests.UserID";   
+		inner join app_users on app_users.App_UserID=userrequests.UserID
+		where Request_status='".$status."'";   
 		$query = $this->db->query($sql);
 		return $query->result();
 	

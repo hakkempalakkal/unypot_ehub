@@ -8,7 +8,7 @@ class Requestes extends CI_Controller
     }
 
     public function index() {
-        $data["datas"] = $this->dataaccess->getallnewrequests();
+        $data["datas"] = $this->dataaccess->getallnewrequests("Requested");
         $this->layout->display('page/Requesteslist',$data);
     }
 
@@ -24,8 +24,23 @@ class Requestes extends CI_Controller
             'Request_status' => $Status     
         );
        $requestid= $this->dataaccess->update("userrequests", $insertrequest,"UserRequestID=".$id); 
-       redirect(site_url("Requestes/View/".$id));
+       redirect(site_url("Requestes"));
         
+    }
+
+    public function Pending() {
+        $data["datas"] = $this->dataaccess->getallnewrequests("Pending");
+        $this->layout->display('page/Requesteslist',$data);
+    }
+
+    public function Rejected() {
+        $data["datas"] = $this->dataaccess->getallnewrequests("Rejected");
+        $this->layout->display('page/Requesteslist',$data);
+    }
+
+    public function completed() {
+        $data["datas"] = $this->dataaccess->getallnewrequests("Accepted");
+        $this->layout->display('page/Requesteslist',$data);
     }
 
     
