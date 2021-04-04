@@ -31,12 +31,12 @@
               <?php foreach($datas as $new) { ?>
               <tr>
                  
-                  <td style="text-align:left"><?=$row->UserRequestID;?></td>
-                  <td style=" text-align:left"><?=$row->servicename;?></td>
-                  <td style=" text-align:left"><?=$row->RequetedDate;?></td>
-                  <td style=" text-align:left"><?=$row->Fullname;?></td>
-                  <td style=" text-align:left"><?=$row->adhaarno;?></td>
-                  <td style=" text-align:left"><?=$row->Phonenumber;?></td>
+                  <td style="text-align:left"><?=$new->UserRequestID;?></td>
+                  <td style=" text-align:left"><?=$new->servicename;?></td>
+                  <td style=" text-align:left"><?=$new->RequetedDate;?></td>
+                  <td style=" text-align:left"><?=$new->Fullname;?></td>
+                  <td style=" text-align:left"><?=$new->adhaarno;?></td>
+                  <td style=" text-align:left"><?=$new->Phonenumber;?></td>
                 </tr>
                 <?php }?>
               </tbody>
