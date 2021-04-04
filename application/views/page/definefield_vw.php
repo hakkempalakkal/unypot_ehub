@@ -9,7 +9,7 @@
         <form method="POST" class="formGeneral" enctype="multipart/form-data" action="<?= site_url("definefield/savegeneral/<?=$id;?>") ?>">
         <table class="table table-bordered table-striped">
           <tbody>
-            <tr>
+            <tr style="display:none">
               <td style="width:25%">Logo</td>
               <td>
                 <img src="<?= base_url("uploaded/".$img_logo) ?>" style="width:100px; height:100px" />
@@ -19,7 +19,7 @@
               </td>
             </tr>
             <tr>
-              <td style="width:25%">App Name</td>
+              <td style="width:25%">Page Tittle</td>
               <td><input type="text" id="app_name" name="app_name" class="form-control" value="<?= $app_name ?>" /></td>
             </tr>
             <tr>
