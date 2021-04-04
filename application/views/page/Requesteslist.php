@@ -38,7 +38,7 @@
                   <td style=" text-align:left"><?=$new->Fullname;?></td>
                   <td style=" text-align:left"><?=$new->adhaarno;?></td>
                   <td style=" text-align:left"><?=$new->Phonenumber;?></td>
-                  <td style=" text-align:left"><a href="View/<?=$new->UserRequestID;?>" >View </a></td>
+                  <td style=" text-align:left"><a href="Requestes/View/<?=$new->UserRequestID;?>" >View </a></td>
                 </tr>
                 <?php }?>
               </tbody>
