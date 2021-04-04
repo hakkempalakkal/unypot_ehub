@@ -169,7 +169,7 @@ class Mdataaccess extends CI_Controller
                 $field_data=$row->field_data;
             }
             else{
-                $field_data=""
+                $field_data="";
             }
             $insertLine = array(
                 'form_id' => $form_id, 
