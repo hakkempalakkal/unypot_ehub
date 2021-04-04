@@ -78,8 +78,8 @@
       <!-- this row will not appear when printing -->
       <div class="row no-print">
         <div class="col-xs-12">
-          <a href="Changestatus/<?=$req->UserRequestID;?>/Rejected"  class="btn btn-danger"><i class="fa fa-print"></i> Reject</a>
-          <a href="Changestatus/<?=$req->UserRequestID;?>/Accepted"  class="btn btn-success"><i class="fa fa-print"></i> Accept</a>
+          <a href="../Changestatus/<?=$req->UserRequestID;?>/Rejected"  class="btn btn-danger"><i class="fa fa-print"></i> Reject</a>
+          <a href="../Changestatus/<?=$req->UserRequestID;?>/Accepted"  class="btn btn-success"><i class="fa fa-print"></i> Accept</a>
           </button>
         
         </div>
