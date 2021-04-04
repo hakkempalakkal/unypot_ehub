@@ -169,13 +169,13 @@ class Mdataaccess extends CI_Controller
                 $field_data=$row->field_data;
             }
             else{
-                $field_data="";
+                $field_data=""
             }
             $insertLine = array(
                 'form_id' => $form_id, 
                 'field_id' => $row->row_id, 
                 'field_name' => $row->field_name, 
-                'field_data' => $row->field_data,          
+                'field_data' => $field_data,          
             );
             $this->dataaccess->insert("dataform", $insertLine); 
         }
