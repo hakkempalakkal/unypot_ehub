@@ -20,10 +20,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="index.html"><i class="fa fa-circle-o"></i> New Request</a></li>
-            <li ><a href="index2.html"><i class="fa fa-circle-o"></i> Pending</a></li>
-            <li ><a href="index2.html"><i class="fa fa-circle-o"></i> Completed</a></li>
-            <li ><a href="index2.html"><i class="fa fa-circle-o"></i> Rejected</a></li>
+            <li><a href="<?= site_url("Requestes") ?>"><i class="fa fa-circle-o"></i> New Request</a></li>
+            <li ><a href="<?= site_url("Requestes/Pending") ?>"><i class="fa fa-circle-o"></i> Pending</a></li>
+            <li ><a href="<?= site_url("Requestes/Complted") ?>"><i class="fa fa-circle-o"></i> Completed</a></li>
+            <li ><a href="<?= site_url("Requestes/Rejected") ?>"><i class="fa fa-circle-o"></i> Rejected</a></li>
           </ul>
         </li>
 

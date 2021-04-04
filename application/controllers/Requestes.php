@@ -8,6 +8,7 @@ class Requestes extends CI_Controller
     }
 
     public function index() {
+        $data["Tittle"]="New Request";
         $data["datas"] = $this->dataaccess->getallnewrequests("Requested");
         $this->layout->display('page/Requesteslist',$data);
     }
@@ -29,16 +30,19 @@ class Requestes extends CI_Controller
     }
 
     public function Pending() {
+        $data["Tittle"]="Pending Request";
         $data["datas"] = $this->dataaccess->getallnewrequests("Pending");
         $this->layout->display('page/Requesteslist',$data);
     }
 
     public function Rejected() {
+        $data["Tittle"]="Rejected Request";
         $data["datas"] = $this->dataaccess->getallnewrequests("Rejected");
         $this->layout->display('page/Requesteslist',$data);
     }
 
     public function completed() {
+        $data["Tittle"]="Complted Request";
         $data["datas"] = $this->dataaccess->getallnewrequests("Accepted");
         $this->layout->display('page/Requesteslist',$data);
     }

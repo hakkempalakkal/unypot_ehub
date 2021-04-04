@@ -1,11 +1,11 @@
 <div class="content-wrapper">
   <section class="content-header">
     <h1>
-      <i class="fa fa-user"></i>&nbsp; <span class="title-page">New Requestes</span>
+      <i class="fa fa-user"></i>&nbsp; <span class="title-page"><?=$Tittle;?></span>
       <small>List of data</small>
     </h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-user"></i> New Requestes</a></li>
+      <li><a href="#"><i class="fa fa-user"></i><?=$Tittle;?></a></li>
       <li class="active">List of data</li>
     </ol>
   </section>
