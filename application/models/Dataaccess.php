@@ -62,6 +62,13 @@ class Dataaccess extends CI_Model {
 	
 	}
 
+	public function getallanswerbyrequest($id) {
+		$sql="SELECT dataform.`field_id`,dataform.`field_name`,dataform.`field_data`,dynamicfield.field_type FROM `dataform`inner join userrequests on userrequests.UserRequestID=dataform.form_id inner join dynamicfield ON dynamicfield.row_id=dataform.field_id where dynamicfield.field_type not in('Title','Label','Label Bold') and userrequests.UserRequestID=".$id;    
+		$query = $this->db->query($sql);
+		return $query->result();
+	
+	}
+
 	
 
 	public function get($table, $condition) {

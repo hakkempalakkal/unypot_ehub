@@ -98,7 +98,7 @@ class Definefield extends CI_Controller {
         echo json_encode($output);
     }
 
-    public function savegeneral()
+    public function savegeneral($id=0)
     {
         $app_name = $this->input->post("app_name");
         $opening_text = $this->input->post("opening_text");
@@ -128,7 +128,7 @@ class Definefield extends CI_Controller {
             'closing_text' => $closing_text,
             'img_logo' => $file_name,             
         );
-        $this->dataaccess->update($this->table, $update, "1=1");
+        $this->dataaccess->update($this->table, $update, "service_id=".$id);
         redirect(site_url("definefield"));
     }
 
@@ -238,6 +238,8 @@ class Definefield extends CI_Controller {
 
         $selected_yes = ($field_mandatory == "Yes") ? "selected" : "";
         $selected_no = ($field_mandatory == "No") ? "selected" : "";
+
+        Title,Label,Label Bold
 
         $type_list = '
                 <option value="Text" '.$selected_text.'>Input Text</option>

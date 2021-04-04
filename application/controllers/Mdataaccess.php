@@ -142,6 +142,23 @@ class Mdataaccess extends CI_Controller
         exitJsonFormat($ret);     
     }
 
+    public function getinputsbyid($reqid=0) {
+        $field_list = $this->dataaccess->getallanswerbyrequest($reqid);
+
+        if(!empty($field_list)) {
+           $response["Userinputs"]= $field_list;
+        } else {
+           
+            $response["Userinputs"]=array();
+        }
+       
+        $ret = array(
+            'Status' => 200,
+            'Data' => $response
+        );
+        exitJsonFormat($ret);     
+    }
+
     
 
     public function doSubmit($userid=0,$id=0) {

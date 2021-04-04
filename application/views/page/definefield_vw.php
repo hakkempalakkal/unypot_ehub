@@ -6,7 +6,7 @@
   <section class="content">
     <div class="row">        
       <div class="col-lg-12">
-        <form method="POST" class="formGeneral" enctype="multipart/form-data" action="<?= site_url("definefield/savegeneral") ?>">
+        <form method="POST" class="formGeneral" enctype="multipart/form-data" action="<?= site_url("definefield/savegeneral/<?=$id;?>") ?>">
         <table class="table table-bordered table-striped">
           <tbody>
             <tr>
