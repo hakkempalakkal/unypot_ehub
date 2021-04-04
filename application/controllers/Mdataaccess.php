@@ -163,6 +163,8 @@ class Mdataaccess extends CI_Controller
         
         $form_id=  $requestid;
        
+        var_dump($dataList);
+        die();
         foreach($dataList->data as $row) {
             $insertLine = array(
                 'form_id' => $form_id, 
