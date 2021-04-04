@@ -17,7 +17,7 @@ class ServiceList extends CI_Controller {
     {     
         $table = "services";
         $condition = $this->input->post("where");
-        $column_order = array('service_id', 'servicename'); 
+        $column_order = array('service_id', 'servicename','Short_description','Requiremnts'); 
         $column_search = array(); 
          $order = array('service_id' => 'desc'); 
        $custom_search = array(); 
