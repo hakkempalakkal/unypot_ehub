@@ -37,7 +37,7 @@ class Login extends CI_Controller
                     'SesRoleId' => $rs->role_id,
                 );   
                 $this->session->set_userdata("SessionLogin", $datalogin); 
-                redirect(site_url("definefield"));
+                redirect(site_url("Requestes"));
             }
             else {
                 redirect(site_url()."?msg=Invalid user is or password");

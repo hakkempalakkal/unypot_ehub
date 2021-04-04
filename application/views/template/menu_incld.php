@@ -22,7 +22,7 @@
           <ul class="treeview-menu">
             <li><a href="<?= site_url("Requestes") ?>"><i class="fa fa-circle-o"></i> New Request</a></li>
             <li ><a href="<?= site_url("Requestes/Pending") ?>"><i class="fa fa-circle-o"></i> Pending</a></li>
-            <li ><a href="<?= site_url("Requestes/Complted") ?>"><i class="fa fa-circle-o"></i> Completed</a></li>
+            <li ><a href="<?= site_url("Requestes/Completed") ?>"><i class="fa fa-circle-o"></i> Completed</a></li>
             <li ><a href="<?= site_url("Requestes/Rejected") ?>"><i class="fa fa-circle-o"></i> Rejected</a></li>
           </ul>
         </li>
