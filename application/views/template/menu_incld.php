@@ -5,8 +5,8 @@
         <img src="<?= base_url("assets/dashtemp") ?>/dist/img/user.png" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p>Demo</p>
-        <a href="#"><i class="fa fa-building"></i> Your Company</a>
+        <p>E-hub</p>
+        <a href="#"><i class="fa fa-building"></i> Admin User</a>
       </div>
     </div>
 

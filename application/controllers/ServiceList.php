@@ -39,8 +39,8 @@ class ServiceList extends CI_Controller {
             $row = array();
             $row[] = $link;
             $row[] = $get->servicename;
-            $row[] = $get->servicename;
-            $row[] = $get->servicename;
+            $row[] = $get->Short_description;
+            $row[] = $get->Requiremnts;
             $data[] = $row;
         }
 
