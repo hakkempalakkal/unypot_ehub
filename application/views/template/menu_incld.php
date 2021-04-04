@@ -39,8 +39,8 @@
             <li><a href="ServiceList"><i class="fa fa-circle-o"></i> Create Service</a></li>
           </ul>
         </li>
-      <li><a href="<?= site_url("definefield") ?>"><i class="fa fa-file"></i> Setup Android Form</a></li>
-      <li><a href="<?= site_url("dataform") ?>"><i class="fa fa-table"></i> Data inputted</a></li>
+     
+      <!-- <li><a href="<?= site_url("dataform") ?>"><i class="fa fa-table"></i> Data inputted</a></li> -->
       <li><a href="<?= site_url("user") ?>"><i class="fa fa-user"></i> User Backend</a></li>
       <li><a href="<?= site_url("login/logout") ?>"><i class="fa fa-power-off"></i> Logout</a></li>
     </ul>

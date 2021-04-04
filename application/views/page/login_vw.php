@@ -22,7 +22,7 @@
 <div class="login-box">
   <div class="login-box-body" style="border-radius:10px">
     <div class="login-logo">
-      <span class="logo-title" style="color:#444; font-size:25px; font-family:Roboto; font-weight:bold; text-transform:uppercase; letter-spacing:1px">Dynamic Form</span>
+      <span class="logo-title" style="color:#444; font-size:25px; font-family:Roboto; font-weight:bold; text-transform:uppercase; letter-spacing:1px">E-HUB</span>
     </div>
     <form action="<?= site_url("login") ?>/doLogin" method="post">
       <div class="form-group has-feedback">
@@ -68,7 +68,7 @@
 
     </div>
 
-      <div class="row">
+      <div class="row " style="display:none">
         <div class="col-xs-12">
           <div style="clear:both; height:25px"></div>
           <span>Username: <strong>demo</strong></span>
