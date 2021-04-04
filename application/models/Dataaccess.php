@@ -53,6 +53,17 @@ class Dataaccess extends CI_Model {
 	}
 
 
+	public function getallrequestbyid($id) {
+		$sql="SELECT userrequests.UserRequestID,`RequetedDate`,`Request_status`,services.servicename FROM `userrequests`
+		inner join services on services.service_id=userrequests.ServiceID
+		where UserID=".$id;    
+		$query = $this->db->query($SQL);
+		return $query->result();
+	
+	}
+
+	
+
 	public function get($table, $condition) {
 		$this->db->select('*');
 		$this->db->from($table);
