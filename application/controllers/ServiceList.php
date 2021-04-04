@@ -31,7 +31,7 @@ class ServiceList extends CI_Controller {
 				  <a href="javascript:void(0)" data-toggle="dropdown" style="color:#111"><i class="fa fa-folder-open"></i></a>
 				  <ul class="dropdown-menu" role="menu">
 					<li><a href="definefield/viewss/'.$get->service_id.'" style="color:#111" >View</a></li>
-					<li><a href="javascript:void(0)" style="color:#111" onclick="generateModalForm(\'edit\', \''.$get->service_id.'\')">Update</a></li>
+					<li><a href="Service/update/'.$get->service_id.'" style="color:#111" onclick="generateModalForm(\'edit\', \''.$get->service_id.'\')">Update</a></li>
 					<li><a href="#" style="color:#111" onclick="doDelete(\''.$get->service_id.'\')">Delete</a></li>
 				  </ul>
 				</div>

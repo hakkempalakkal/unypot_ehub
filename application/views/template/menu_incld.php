@@ -36,7 +36,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?= site_url("ServiceList") ?>"><i class="fa fa-circle-o"></i> Service List</a></li>
-            <li><a href="ServiceList"><i class="fa fa-circle-o"></i> Create Service</a></li>
+            <li><a href="<?= site_url("Service") ?>"><i class="fa fa-circle-o"></i> Create Service</a></li>
           </ul>
         </li>
      

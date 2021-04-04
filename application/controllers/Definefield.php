@@ -129,7 +129,7 @@ class Definefield extends CI_Controller {
             'img_logo' => $file_name,             
         );
         $this->dataaccess->update($this->table, $update, "service_id=".$id);
-        redirect(site_url("definefield"));
+        redirect(site_url("definefield/viewss/".$id));
     }
 
     public function save()
@@ -239,7 +239,7 @@ class Definefield extends CI_Controller {
         $selected_yes = ($field_mandatory == "Yes") ? "selected" : "";
         $selected_no = ($field_mandatory == "No") ? "selected" : "";
 
-        Title,Label,Label Bold
+       
 
         $type_list = '
                 <option value="Text" '.$selected_text.'>Input Text</option>

@@ -62,6 +62,17 @@ class Dataaccess extends CI_Model {
 	
 	}
 
+	public function getallnewrequests() {
+		$sql="SELECT userrequests.UserRequestID,`RequetedDate`,`Request_status`,services.servicename,services.Short_description 
+		,app_users.Fullname,app_users.adhaarno,app_users.Phonenumber,app_users.EmailID
+		FROM `userrequests`
+		inner join services on services.service_id=userrequests.ServiceID
+		inner join app_users on app_users.App_UserID=userrequests.UserID";   
+		$query = $this->db->query($sql);
+		return $query->result();
+	
+	}
+
 	public function getallanswerbyrequest($id) {
 		$sql="SELECT dataform.`field_id`,dataform.`field_name`,dataform.`field_data`,dynamicfield.field_type FROM `dataform`inner join userrequests on userrequests.UserRequestID=dataform.form_id inner join dynamicfield ON dynamicfield.row_id=dataform.field_id where dynamicfield.field_type not in('Title','Label','Label Bold') and userrequests.UserRequestID=".$id;    
 		$query = $this->db->query($sql);
