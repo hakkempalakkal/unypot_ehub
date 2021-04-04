@@ -107,6 +107,24 @@ class Mdataaccess extends CI_Controller
         exitJsonFormat($ret);     
     }
 
+    public function logins($username="",$password="") {
+        $field_list = $this->dataaccess->selectsinglerow('app_users', "Phonenumber='".$username."' and  Password='".$password."'");
+
+        if(!empty($field_list)) {
+            $response["msg"]="success";
+            $response["logindetails"]= $field_list;
+        } else {
+            $response["msg"]="failed";
+            $response["logindetails"]=array();
+        }
+       
+        $ret = array(
+            'Status' => 200,
+            'Data' => $response
+        );
+        exitJsonFormat($ret);     
+    }
+
     public function doSubmit($userid=0,$id=0) {
         $field_list = $this->input->post('field_list'); 
         $dataList = json_decode($field_list);
