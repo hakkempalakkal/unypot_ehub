@@ -177,11 +177,11 @@ class Mdataaccess extends CI_Controller
         // $form_id=  $requestid;
 
         $insertLine = array(
-            'Fullname' => $Reqid, 
-            'adhaarno' => $field_id, 
-            'Phonenumber' => $Name, 
-            'EmailID' => $Image,     
-            'Password' => $Image,      
+            'Fullname' => $fullnale, 
+            'adhaarno' => $adhaar, 
+            'Phonenumber' => $mobile, 
+            'EmailID' => $email,     
+            'Password' => $password,      
         );
         $this->dataaccess->insert("app_users", $insertLine); 
        
