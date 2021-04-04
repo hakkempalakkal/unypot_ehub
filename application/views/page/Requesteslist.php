@@ -25,6 +25,7 @@
                   <th style=" text-align:left">Request From</th>
                   <th style=" text-align:left">Adhaar</th>
                   <th style=" text-align:left">Mobile No</th>
+                  <th>#</th>
                 </tr>
               </thead>
               <tbody>
@@ -37,6 +38,7 @@
                   <td style=" text-align:left"><?=$new->Fullname;?></td>
                   <td style=" text-align:left"><?=$new->adhaarno;?></td>
                   <td style=" text-align:left"><?=$new->Phonenumber;?></td>
+                  <td style=" text-align:left"><a href="View/<?=$new->UserRequestID;?>" >View </a></td>
                 </tr>
                 <?php }?>
               </tbody>

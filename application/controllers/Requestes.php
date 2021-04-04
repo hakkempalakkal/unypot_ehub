@@ -12,6 +12,15 @@ class Requestes extends CI_Controller
         $this->layout->display('page/Requesteslist',$data);
     }
 
+    public function View($id=0) {
+        
+        $data["req"] = $this->dataaccess->getSigngleRequest($id);
+        $data["datas"] = $this->dataaccess->getallanswerbyrequest($id);
+        $this->layout->display('page/Requestview',$data);
+    }
+
+    
+
     public function update($id=0) {
 		$data["datas"] = $this->dataaccess->glerow("services","service_id=".$id);
         $this->layout->display('page/Serviceupdate',$data);
