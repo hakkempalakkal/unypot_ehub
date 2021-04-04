@@ -57,7 +57,7 @@
               <td><?=$new->field_name;?></td>
               <td> <?php 
               if($new->field_type=="filechooser"){
-                echo "<img src='".$new->field_data."'/>";
+                echo "<img  style='width: 100%;' src='".$new->field_data."'/>";
               } 
               else{
                 echo $new->field_data;
@@ -78,8 +78,8 @@
       <!-- this row will not appear when printing -->
       <div class="row no-print">
         <div class="col-xs-12">
-          <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-          <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment
+          <a href="Changestatus/<?=$req->UserRequestID;?>/Rejected"  class="btn btn-danger"><i class="fa fa-print"></i> Reject</a>
+          <a href="Changestatus/<?=$req->UserRequestID;?>/Accepted"  class="btn btn-success"><i class="fa fa-print"></i> Accept</a>
           </button>
         
         </div>

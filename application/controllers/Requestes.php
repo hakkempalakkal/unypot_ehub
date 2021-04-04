@@ -18,13 +18,19 @@ class Requestes extends CI_Controller
         $data["datas"] = $this->dataaccess->getallanswerbyrequest($id);
         $this->layout->display('page/Requestview',$data);
     }
+    public function Changestatus($id=0,$Status) {
+        
+        $insertrequest = array(
+            'Request_status' => $Status     
+        );
+       $requestid= $this->dataaccess->update("userrequests", $insertrequest,"UserRequestID=".$id); 
+       redirect(site_url("Requestes/View/".$id));
+        
+    }
 
     
 
-    public function update($id=0) {
-		$data["datas"] = $this->dataaccess->glerow("services","service_id=".$id);
-        $this->layout->display('page/Serviceupdate',$data);
-    }
+   
     public function post() {
 		
         $service_name = $this->input->post("service_name");
